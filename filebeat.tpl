@@ -1,6 +1,4 @@
 {{range .configList}}
-queue.mem.flush.min_events: 1536 
-queue.mem.events: 2048
 - type: log
   enabled: true
   paths:
