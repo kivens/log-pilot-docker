@@ -7,7 +7,7 @@
   multiline.pattern:  '^\['
   multiline.negate: true
   multiline.match: after
-  multiline.max_lines: 10000
+  multiline.max_lines: 600
   multiline.timeout: 3s
   scan_frequency: 1s
   fields_under_root: true
