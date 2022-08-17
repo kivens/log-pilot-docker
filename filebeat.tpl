@@ -1,14 +1,17 @@
 {{range .configList}}
+queue.mem.flush.min_events: 1536 
+queue.mem.events: 2048
 - type: log
   enabled: true
   paths:
       - {{ .HostDir }}/{{ .File }}
+  max_bytes: 40960
   multiline.pattern:  '^\['
   multiline.negate: true
   multiline.match: after
   multiline.max_lines: 10000
-  multiline.timeout: 15s
-  scan_frequency: 10s
+  multiline.timeout: 3s
+  scan_frequency: 1s
   fields_under_root: true
   {{if .Stdout}}
   docker-json: true
